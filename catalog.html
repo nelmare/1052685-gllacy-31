@@ -4,13 +4,16 @@
   <meta charset="utf-8">
   <title>HTML Academy: Глейси</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon/180.png">
+  <link rel="manifest" href="manifest.webmanifest">
 </head>
 <body>
   <header>
     <div>
       <nav>
         <a href="index.html">
-          <img src="logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy Shop">
+          <img src="img/logo.svg" width="154" height="64" alt="Логотип магазина мороженого Gllacy Shop">
         </a>
         <ul>
           <li>
@@ -44,7 +47,7 @@
       <ul>
         <li>
           <button type="button" aria-label="Поиск товара"></button>
-          <form action="#" method="get">
+          <form action="https://echo.htmlacademy.ru" method="get">
             <label class="visually-hidden" for="search-index">Введите слово для поиска</label>
             <input class="search-index__line" type="text" name="search-index"
                    id="search-index" placeholder="Крем-брюле">
@@ -52,7 +55,7 @@
         </li>
         <li>
           <a href="#">Вход</a>
-          <form action="#" method="post">
+          <form action="https://echo.htmlacademy.ru" method="post">
             <div>
               <label class="visually-hidden" for="login-email">Введите e-mail</label>
               <input class="search-index__line" type="email" name="login-email"
@@ -90,7 +93,7 @@
                   </button>
                 </td>
                 <td>
-                  <img src="icecream1.png" width="33" height="33" alt="Изображение пломбира с апельсиновым джемом">
+                  <img src="img/icecream1.jpg" width="33" height="33" alt="Сливочный пломбир с желтым апельсиновым джемом">
                 </td>
                 <td>Пломбир с апельсиновым джемом</td>
                 <td>1,5 кг х <span>200 руб.</span></td>
@@ -103,8 +106,8 @@
                   </button>
                 </td>
                 <td>
-                  <img src="icecream3.png" width="33" height="33" alt="Изображение клубничного пломбира с присыпкой из
-                  белого шоколада">
+                  <img src="img/icecream3.jpg" width="33" height="33" alt="Розовый клубничный пломбир с присыпкой из
+                  маленьких белых сердечек">
                 </td>
                 <td>Клубничный пломбир с присыпкой из белого шоколада</td>
                 <td>1,5 кг х <span>300 руб.</span></td>
@@ -141,117 +144,119 @@
       </li>
     </ul>
     <h1>Сливочное мороженое</h1>
-    <h2 class="visually-hidden">Фильтр</h2>
-    <form class="filter-form" action="#" method="post">
-      <fieldset class="infrastructure">
-        <legend>Сортировка:</legend>
-        <div class="sorting-wrapper">
-          <a class="sorting-link sorting-link-closed" href="#">по популярности</a>
-          <ul class="sorting-list">
-            <li class="sorting-item">
-              <a class="sorting-label sorting-label-active" href="#">по популярности
-                <span class="sorting-check"></span>
-              </a>
+    <section>
+      <h2 class="visually-hidden">Фильтр</h2>
+      <form class="filter-form" action="https://echo.htmlacademy.ru" method="get">
+        <fieldset class="infrastructure">
+          <legend>Сортировка:</legend>
+          <div class="sorting-wrapper">
+            <a class="sorting-link sorting-link-closed" href="#">по популярности</a>
+            <ul class="sorting-list">
+              <li class="sorting-item">
+                <a class="sorting-label sorting-label-active" href="#">по популярности
+                  <span class="sorting-check"></span>
+                </a>
+              </li>
+              <li class="sorting-item">
+                <a class="sorting-label" href="#">сначала недорогие
+                  <span class="sorting-check"></span>
+                </a>
+              </li>
+              <li class="sorting-item">
+                <a class="sorting-label" href="#">сначала дорогие
+                  <span class="sorting-check"></span>
+                </a>
+              </li>
+              <li class="sorting-item">
+                <a class="sorting-label" href="#">по жирности
+                  <span class="sorting-check"></span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </fieldset>
+        <fieldset class="price__wrapper">
+          <legend>Цена: 100 ₽ – 500 ₽</legend>
+          <div class="price__range">
+            <div class="price__line-grey">
+              <div class="price__line-white"></div>
+            </div>
+            <div>
+              <div class="price__circle price__circle--left"></div>
+              <div class="price__circle price__circle--right"></div>
+            </div>
+          </div>
+        </fieldset>
+        <fieldset class="price__wrapper">
+          <legend>Жирность:</legend>
+          <ul class="form__list form__list--plus">
+            <li class="form__item form__item--radio">
+              <input class="form__radio visually-hidden" type="radio" name="radio" id="radio1">
+              <label class="form__radio-name form__label" for="radio1" tabindex="0">0 %</label>
             </li>
-            <li class="sorting-item">
-              <a class="sorting-label" href="#">сначала недорогие
-                <span class="sorting-check"></span>
-              </a>
+            <li class="form__item form__item--radio">
+              <input class="form__radio visually-hidden" type="radio" name="radio" id="radio2" checked>
+              <label class="form__radio-name form__label" for="radio2" tabindex="0">до 10 %</label>
             </li>
-            <li class="sorting-item">
-              <a class="sorting-label" href="#">сначала дорогие
-                <span class="sorting-check"></span>
-              </a>
+            <li class="form__item form__item--radio">
+              <input class="form__radio visually-hidden" type="radio" name="radio" id="radio3">
+              <label class="form__radio-name form__label" for="radio3" tabindex="0">до 30 %</label>
             </li>
-            <li class="sorting-item">
-              <a class="sorting-label" href="#">по жирности
-                <span class="sorting-check"></span>
-              </a>
+            <li class="form__item form__item--radio">
+              <input class="form__radio visually-hidden" type="radio" name="radio" id="radio4">
+              <label class="form__radio-name form__label" for="radio4" tabindex="0">выше 30 %</label>
             </li>
           </ul>
-        </div>
-      </fieldset>
-      <fieldset class="price__wrapper">
-        <legend>Цена: 100 ₽ – 500 ₽</legend>
-        <div class="price__range">
-          <div class="price__line-grey">
-            <div class="price__line-white"></div>
-          </div>
-          <div>
-            <div class="price__circle price__circle--left"></div>
-            <div class="price__circle price__circle--right"></div>
-          </div>
-        </div>
-      </fieldset>
-      <fieldset class="price__wrapper">
-        <legend>Жирность:</legend>
-        <ul class="form__list form__list--plus">
-          <li class="form__item form__item--radio">
-            <input class="form__radio visually-hidden" type="radio" name="radio" id="radio1">
-            <label class="form__radio-name form__label" for="radio1" tabindex="0">0 %</label>
-          </li>
-          <li class="form__item form__item--radio">
-            <input class="form__radio visually-hidden" type="radio" name="radio" id="radio2" checked>
-            <label class="form__radio-name form__label" for="radio2" tabindex="0">до 10 %</label>
-          </li>
-          <li class="form__item form__item--radio">
-            <input class="form__radio visually-hidden" type="radio" name="radio" id="radio3">
-            <label class="form__radio-name form__label" for="radio3" tabindex="0">до 30 %</label>
-          </li>
-          <li class="form__item form__item--radio">
-            <input class="form__radio visually-hidden" type="radio" name="radio" id="radio4">
-            <label class="form__radio-name form__label" for="radio4" tabindex="0">выше 30 %</label>
-          </li>
-        </ul>
-      </fieldset>
-      <fieldset class="price__wrapper">
-        <legend>Наполнители:</legend>
-        <ul>
-          <li class="form__item form__item--checkbox">
-            <label class="form__checkbox-name form__label" for="filler1">
-              <input class="form__checkbox visually-hidden" type="checkbox" name="filler1" id="filler1" checked>
-              <span class="form__check"></span>
-              шоколадные
-            </label>
-          </li>
-          <li class="form__item form__item--checkbox">
-            <label class="form__checkbox-name form__label" for="filler2">
-              <input class="form__checkbox visually-hidden" type="checkbox" name="filler2" id="filler2" checked>
-              <span class="form__check"></span>
-              сахарные присыпки
-            </label>
-          </li>
-          <li class="form__item form__item--checkbox">
-            <label class="form__checkbox-name form__label" for="filler3">
-              <input class="form__checkbox visually-hidden" type="checkbox" name="filler3" id="filler3">
-              <span class="form__check"></span>
-              фрукты
-            </label>
-          </li>
-          <li class="form__item form__item--checkbox">
-            <label class="form__checkbox-name form__label" for="filler4">
-              <input class="form__checkbox visually-hidden" type="checkbox" name="filler4" id="filler4">
-              <span class="form__check"></span>
-              сиропы
-            </label>
-          </li>
-          <li class="form__item form__item--checkbox">
-            <label class="form__checkbox-name form__label" for="filler5">
-              <input class="form__checkbox visually-hidden" type="checkbox" name="filler5" id="filler5">
-              <span class="form__check"></span>
-              джемы
-            </label>
-          </li>
-        </ul>
-      </fieldset>
-      <button type="button">Применить</button>
-    </form>
+        </fieldset>
+        <fieldset class="price__wrapper">
+          <legend>Наполнители:</legend>
+          <ul>
+            <li class="form__item form__item--checkbox">
+              <label class="form__checkbox-name form__label" for="filler1">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="filler1" id="filler1" checked>
+                <span class="form__check"></span>
+                шоколадные
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__checkbox-name form__label" for="filler2">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="filler2" id="filler2" checked>
+                <span class="form__check"></span>
+                сахарные присыпки
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__checkbox-name form__label" for="filler3">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="filler3" id="filler3">
+                <span class="form__check"></span>
+                фрукты
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__checkbox-name form__label" for="filler4">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="filler4" id="filler4">
+                <span class="form__check"></span>
+                сиропы
+              </label>
+            </li>
+            <li class="form__item form__item--checkbox">
+              <label class="form__checkbox-name form__label" for="filler5">
+                <input class="form__checkbox visually-hidden" type="checkbox" name="filler5" id="filler5">
+                <span class="form__check"></span>
+                джемы
+              </label>
+            </li>
+          </ul>
+        </fieldset>
+        <button type="button">Применить</button>
+      </form>
+    </section>
     <section>
       <h2 class="visually-hidden">Продукция магазина</h2>
       <div>
         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
         <div>
-          <img src="icecream1.png" width="267" height="267" alt="Изображение пломбира с апельсиновым джемом">
+          <img src="img/icecream1.jpg" width="267" height="267" alt="Сливочный пломбир с желтым апельсиновым джемом">
           <span>Хит</span>
           <p><span>310 ₽</span>/кг</p>
         </div>
@@ -260,8 +265,7 @@
       <div>
         <h3>Сливочно-кофейное с кусочками шоколада</h3>
         <div>
-          <img src="icecream2.png" width="267" height="267" alt="Изображение cливочно-кофейного пломбира с кусочками
-            шоколада">
+          <img src="img/icecream2.jpg" width="267" height="267" alt="Кофейный пломбир с кусочками шоколада">
           <span>Хит</span>
           <p><span>380 ₽</span>/кг</p>
         </div>
@@ -270,8 +274,8 @@
       <div>
         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
         <div>
-          <img src="icecream3.png" width="267" height="267" alt="Изображение клубничного пломбира с присыпкой из
-                  белого шоколада">
+          <img src="img/icecream3.jpg" width="267" height="267" alt="Розовый клубничный пломбир с присыпкой из
+                  маленьких белых сердечек">
           <span>Хит</span>
           <p><span>355 ₽</span>/кг</p>
         </div>
@@ -280,7 +284,7 @@
       <div>
         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
         <div>
-          <img src="icecream4.png" width="267" height="267" alt="Изображение cливочного крем-брюле с карамельной
+          <img src="img/icecream4.jpg" width="267" height="267" alt="Бежевый cливочный крем-брюле с вкуснейшей карамельной
             подливкой">
           <span>Хит</span>
           <p><span>415 ₽</span>/кг</p>
@@ -290,7 +294,7 @@
       <div>
         <h3>Сливочное с брусничным джемом</h3>
         <div>
-          <img src="icecream5.png" width="267" height="267" alt="Изображение cливочного мороженого брусничным джемом">
+          <img src="img/icecream5.jpg" width="267" height="267" alt="Cливочное мороженое с красным брусничным джемом">
           <span>Хит</span>
           <p><span>325 ₽</span>/кг</p>
         </div>
@@ -299,7 +303,7 @@
       <div>
         <h3>Сливочно-черничное с цельными ягодами черники</h3>
         <div>
-          <img src="icecream6.png" width="267" height="267" alt="Изображение cливочно-черничного мороженого с цельными ягодами черники">
+          <img src="img/icecream6.jpg" width="267" height="267" alt="Сливочно-черничное мороженое с цельными ягодами черники">
           <span>Хит</span>
           <p><span>410 ₽</span>/кг</p>
         </div>
@@ -308,7 +312,8 @@
       <div>
         <h3>Сливочно-лимонное с карамельной присыпкой</h3>
         <div>
-          <img src="icecream7.png" width="267" height="267" alt="Изображение cливочно-лимонного мороженого с карамельной присыпкой">
+          <img src="img/icecream7.jpg" width="267" height="267" alt="Мороженое лимонного цвета с карамельной присыпкой
+          зеленого и красного цвета">
           <span>Хит</span>
           <p><span>315 ₽</span>/кг</p>
         </div>
@@ -317,7 +322,7 @@
       <div>
         <h3>Сливочное с шоколадной стружкой</h3>
         <div>
-          <img src="icecream8.png" width="267" height="267" alt="Изображение cливочного мороженого с шоколадной стружкой">
+          <img src="img/icecream8.jpg" width="267" height="267" alt="Сливочное мороженое с шоколадной стружкой">
           <span>Хит</span>
           <p><span>320 ₽</span>/кг</p>
         </div>
@@ -326,7 +331,7 @@
       <div>
         <h3>Сливочно-ванильное с кусочками шоколада</h3>
         <div>
-          <img src="icecream9.png" width="267" height="267" alt="Изображение cливочно-ванильного мороженого с кусочками шоколада">
+          <img src="img/icecream9.jpg" width="267" height="267" alt="Мороженое ванильного цвета с кусочками шоколада">
           <span>Хит</span>
           <p><span>440 ₽</span>/кг</p>
         </div>
@@ -335,7 +340,7 @@
       <div>
         <h3>Сливочноe с ментоловым сиропом</h3>
         <div>
-          <img src="icecream10.png" width="267" height="267" alt="Изображение cливочного мороженого с ментоловым сиропом">
+          <img src="img/icecream10.jpg" width="267" height="267" alt="Мороженое голубого цвета">
           <span>Хит</span>
           <p><span>435 ₽</span>/кг</p>
         </div>
@@ -344,7 +349,7 @@
       <div>
         <h3>Сливочное с кусочками черного шоколада</h3>
         <div>
-          <img src="icecream11.png" width="267" height="267" alt="Изображение cливочного мороженого с кусочками черного шоколада">
+          <img src="img/icecream11.jpg" width="267" height="267" alt="Сливочное мороженое с кусочками черного шоколада">
           <span>Хит</span>
           <p><span>355 ₽</span>/кг</p>
         </div>
@@ -353,7 +358,7 @@
       <div>
         <h3>Сливочное с мятным сиропом</h3>
         <div>
-          <img src="icecream12.png" width="267" height="267" alt="Изображение cливочного мороженого с мятным сиропом">
+          <img src="img/icecream12.jpg" width="267" height="267" alt="Сливочное мороженого мятного цвета">
           <span>Хит</span>
           <p><span>420 ₽</span>/кг</p>
         </div>
@@ -418,7 +423,7 @@
     </ul>
     <div>
       <div>
-        <img src="academy-logo.svg" width="108" height="31" alt="Логотип HTMl Academy">
+        <img src="img/logo-academy.svg" width="108" height="31" alt="Логотип HTMl Academy">
       </div>
       <p>Сделано в <a href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2021</p>
     </div>
