@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/roboto.woff2") format("woff2"),
-  url("./fonts/roboto.woff") format("woff");
+  src: url("../fonts/roboto.woff2") format("woff2"),
+       url("../fonts/roboto.woff") format("woff");
   font-weight: 400;
   font-style: normal;
   font-display: swap;
@@ -9,8 +9,8 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/robotomedium.woff2") format("woff2"),
-  url("./fonts/robotomedium.woff") format("woff");
+  src: url("../fonts/robotomedium.woff2") format("woff2"),
+       url("../fonts/robotomedium.woff") format("woff");
   font-weight: 500;
   font-style: normal;
   font-display: swap;
@@ -18,8 +18,8 @@
 
 @font-face {
   font-family: "Roboto";
-  src: url("./fonts/robotobold.woff2") format("woff2"),
-  url("./fonts/robotobold.woff") format("woff");
+  src: url("../fonts/robotobold.woff2") format("woff2"),
+       url("../fonts/robotobold.woff") format("woff");
   font-weight: 700;
   font-style: normal;
   font-display: swap;
@@ -99,7 +99,7 @@ body {
 
 .green-back {
   background-color: var(--basic-green);
-  background-image: url("img/lightning1.png");
+  background-image: url("../img/lightning1.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 1200px 966px;
@@ -107,7 +107,7 @@ body {
 
 .grey-blue-back {
   background-color: var(--basic-grey-blue);
-  background-image: url("img/lightning2.png");
+  background-image: url("../img/lightning2.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 1200px 966px;
@@ -115,7 +115,7 @@ body {
 
 .brown-back {
   background-color: var(--basic-brown);
-  background-image: url("img/lightning3.png");
+  background-image: url("../img/lightning3.png");
   background-repeat: no-repeat;
   background-position: top center;
   background-size: 1200px 966px;
@@ -153,7 +153,7 @@ input[type="radio"].visually-hidden {
 }
 
 .button:hover {
-  background: linear-gradient(0deg, var(--special-green),var(--special-green)), linear-gradient(180deg, var(--gradient-orange) 0%, var(--gradient-red) 100%);
+  background: linear-gradient(0deg, var(--special-green), var(--special-green)), linear-gradient(180deg, var(--gradient-orange) 0%, var(--gradient-red) 100%);
   box-shadow: 0px 1px 2px var(--red1);
 }
 
@@ -193,7 +193,7 @@ input[type="radio"].visually-hidden {
 }
 
 .main-nav-link:focus {
-  background-color:  var(--dirty-white);
+  background-color: var(--dirty-white);
   box-shadow: inset 0px 2px 1px var(--light-green-grey);
   border-bottom: none;
   border-radius: 26px;
@@ -318,6 +318,12 @@ input[type="radio"].visually-hidden {
   border-bottom: 1px solid var(--grey5);
 }
 
+.login-form-list a:hover,
+.login-form-list a:focus {
+  color: var(--orange);
+  border-bottom: 1px solid var(--pink2);
+}
+
 .cart-content {
   background-color: var(--white-grey);
   box-shadow: 0px 20px 20px var(--shadow-grey2);
@@ -329,6 +335,11 @@ input[type="radio"].visually-hidden {
 
 .cart-content .product-info {
   color: var(--black);
+}
+
+.cart-content img {
+  background-color: var(--grey7);
+  border-radius: 50%;
 }
 
 .cart-price {
@@ -402,7 +413,7 @@ input[type="radio"].visually-hidden {
 
 .slider-controls button.active,
 .slider-controls button:focus {
-background-color: var(--basic-white);
+  background-color: var(--basic-white);
 }
 
 .cards-item:hover {
@@ -419,7 +430,7 @@ background-color: var(--basic-white);
 }
 
 .special-item.raspberries {
-  background-image: url("img/background-raspberries.png");
+  background-image: url("../img/background-raspberries.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
@@ -427,7 +438,7 @@ background-color: var(--basic-white);
 }
 
 .special-item.chocolates {
-  background-image: url("img/background-chocolate.png");
+  background-image: url("../img/background-chocolate.png");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center center;
@@ -473,8 +484,13 @@ background-color: var(--basic-white);
   text-align: center;
 }
 
+.cards-item img {
+  border-radius: 50%;
+  background-color: var(--grey);
+}
+
 .cards-label {
-  background-image: url("img/label.png");
+  background-image: url("../img/label.png");
   background-repeat: no-repeat;
   background-position: center center;
   background-size: 100% 100%;
@@ -504,7 +520,7 @@ background-color: var(--basic-white);
 /*О магазине*/
 
 .about {
-  background-image: url("img/background-waffles.png");
+  background-image: url("../img/background-waffles.png");
   background-size: 100%, 100%;
   background-repeat: no-repeat;
   background-position: center, center;
@@ -529,7 +545,7 @@ background-color: var(--basic-white);
 
 .blog {
   background-color: var(--basic-white);
-  background-image: url("img/background-strawberries.png");
+  background-image: url("../img/background-strawberries.png");
   background-size: 100%, 100%;
   background-repeat: no-repeat;
   background-position: center, right;
@@ -570,7 +586,7 @@ background-color: var(--basic-white);
 
 .mailing {
   background-color: var(--basic-white);
-  background-image: url("img/background-mail.png");
+  background-image: url("../img/background-mail.png");
   background-size: 100%, 100%;
   background-repeat: no-repeat;
   background-position: top, center;
@@ -585,7 +601,7 @@ background-color: var(--basic-white);
   background: var(--white-grey);
   border-radius: 16px;
   min-height: 210px;
-  margin:0 5px;
+  margin: 0 5px;
 }
 
 .mailing-text {
@@ -635,6 +651,169 @@ background-color: var(--basic-white);
   text-decoration: none;
 }
 
+/*Хлебные крошки*/
+
+.breadcrumbs {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.breadcrumbs-link {
+  color: var(--basic-white);
+  text-decoration: none;
+  border-bottom: 1px solid var(--special-green);
+}
+
+.breadcrumbs-link:hover,
+.breadcrumbs-link:focus {
+  color: var(--pink);
+  border-bottom: 1px solid var(--special-pink);
+}
+
+.breadcrumbs-link.active {
+  border-bottom: none;
+}
+
+/*Каталог*/
+.catalog-title {
+  font-weight: bold;
+  font-size: 35px;
+  line-height: 41px;
+}
+
+/*Фильтр*/
+.filter-form {
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.fieldset-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.filter-fieldset legend {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+}
+
+.sorting-select {
+  background: var(--special-green);
+  border-radius: 20px;
+  border: none;
+  color: var(--basic-white);
+}
+
+.sorting-select:hover {
+  color: var(--basic-dark-grey);
+}
+
+.price-range {
+  background: var(--special-green);
+  border-radius: 20px;
+  border: none;
+  color: var(--basic-white);
+  min-height: 36px;
+  width: 218px;
+  position: relative;
+}
+
+.price-line-grey {
+  /*width: 176px;*/
+  height: 2px;
+  background-color: rgba(248, 247, 244, 0.5);
+}
+
+.price-line-white {
+  width: 60%;
+  height: 2px;
+  background-color: #F8F7F4;
+}
+
+.price-circle {
+  position: absolute;
+  top: -9px;
+  width: 4px;
+  height: 4px;
+  background: #ABABAB;
+  border: 8px solid #fff;
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 rgba(171, 171, 171, 0.3);
+  box-shadow: 0 2px 1px 0 rgba(171, 171, 171, 0.3);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.price-circle-left {
+  left: 10%;
+}
+
+.price-circle-right {
+  right: 10%;
+}
+
+
+.price-circle:hover {
+  width: 4px;
+  height: 5px;
+  border: 9px solid #fff;
+}
+
+.filter-button {
+  background: var(--special-green);
+  border-radius: 20px;
+  border: 2px solid var(--basic-white);
+  color: var(--basic-white);
+}
+
+.filter-button:hover {
+  border: none;
+  color: var(--basic-dark-grey);
+  background-color: var(--basic-white);
+}
+
+.filter-button:focus {
+  box-shadow: inset 0px 2px 1px var(--light-green-grey);
+}
+
+
+/*Пагинация*/
+
+.pagination-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.pagination-link {
+  color: var(--basic-white);
+  font-weight: 500;
+  line-height: 18px;
+  width: 26px;
+  height: 26px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  text-decoration: none;
+  border-radius: 50%;
+}
+
+.pagination-link:hover {
+  background-color: var(--special-green);
+}
+
+.pagination-link.active,
+.pagination-link:focus {
+  background-color: var(--basic-white);
+  color: var(--basic-dark-grey);
+}
+
 /*Подвал сайта*/
 
 .footer {
@@ -657,7 +836,7 @@ background-color: var(--basic-white);
 .footer-item a:hover,
 .footer-item a:focus {
   color: var(--pink);
-  border: 1px solid var(--special-pink);
+  border-bottom: 1px solid var(--special-pink);
 }
 
 /*Социальные сети*/
