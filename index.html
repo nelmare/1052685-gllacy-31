@@ -9,8 +9,15 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.css" rel="stylesheet">
+  <link rel="preload" as="image" href="img/icecream-group1.png">
+  <link rel="preload" as="image" href="img/icecream-group2.png">
+  <link rel="preload" as="image" href="img/icecream-group3.png">
 </head>
-<body class="green-back">
+<body class="">
+<input class="btn-1" type="radio" id="btn-1" name="toggle" checked>
+<input class="btn-2" type="radio" id="btn-2" name="toggle">
+<input class="btn-3" type="radio" id="btn-3" name="toggle">
+<div class="wrapper">
 <header>
   <nav class="main-nav">
     <a class="logo">
@@ -130,35 +137,25 @@
 </header>
 <main class="page-main">
   <h1 class="visually-hidden">Магазин мороженого "Glaccy shop"</h1>
-  <div class="slider">
-    <ul class="slider-list">
-      <li class="slider-item">
-        <h3>Крем-брюле и пломбир с малиновым джемом</h3>
-        <div class="slider-image-wrapper">
-          <img src="img/icecream-group1.png" width="647" height="584" alt="Крем-брюле в вафельном рожке и розовое
-            мороженое с малиновым джемом в вафельном рожке">
-        </div>
-        <button class="button slider-button" type="button">Давайте оба</button>
-      </li>
-      <li class="slider-item">
-        <h3>Шоколадный пломбир и лимонный сорбет</h3>
-        <img src="img/icecream-group2.png" width="647" height="584" alt="Два вафельных рожка с шоколадным пломбиром
-            с кусочками шоколада и лимонным сорбетом с цукатами из лимона">
-        <button class="button slider-button" type="button">Давайте оба</button>
-      </li>
-      <li class="slider-item">
-        <h3>Пломбир с помадкой и клубничный щербет</h3>
-        <img src="img/icecream-group3.png" width="647" height="584" alt="Два вафельных рожка со сливочным пломбиром,
-             покрытым шоколадной помадкой и розовым клубничным щербетом">
-        <button class="button slider-button" type="button">Давайте оба</button>
-      </li>
-    </ul>
-    <div class="slider-controls">
-      <button class="active" type="button" aria-label="Переключить слайд"></button>
-      <button type="button" aria-label="Переключить слайд"></button>
-      <button type="button" aria-label="Переключить слайд"></button>
+  <section class="slider">
+    <div class="slide slide1" id="slide1">
+      <div class="slide-title">Крем-брюле и пломбир с малиновым джемом</div>
+      <a class="button slide-button" href="#">Давайте оба!</a>
     </div>
-  </div>
+    <div class="slide slide2" id="slide2">
+      <div class="slide-title">Шоколадный пломбир и лимонный сорбет</div>
+      <a class="button slide-button" href="#">Давайте оба!</a>
+    </div>
+    <div class="slide slide3" id="slide3">
+      <div class="slide-title">Пломбир с помадкой и клубничный щербет</div>
+      <a class="button slide-button" href="#">Давайте оба!</a>
+    </div>
+    <div class="toggle">
+      <label for="btn-1">1</label>
+      <label for="btn-2">2</label>
+      <label for="btn-3">3</label>
+    </div>
+  </section>
   <section class="special">
     <h2 class="visually-hidden">Акции магазина</h2>
     <div class="special-item raspberries">
@@ -179,7 +176,7 @@
       <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
       <div class="cards-image-wrapper">
         <img class="cards-image" src="img/icecream1.png" width="267" height="267" alt="Сливочный пломбир с желтым апельсиновым джемом">
-        <span class="cards-label" area-label="хит"></span>
+        <p class="cards-label"><span class="visually-hidden">хит</span></p>
         <p><span class="cards-price">310 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
@@ -188,7 +185,7 @@
       <h3>Сливочно-кофейное с кусочками шоколада</h3>
       <div class="cards-image-wrapper">
         <img class="cards-image" src="img/icecream2.png" width="267" height="267" alt="Кофейный пломбир с кусочками шоколада">
-        <span class="cards-label" area-label="хит"></span>
+        <p class="cards-label"><span class="visually-hidden">хит</span></p>
         <p><span class="cards-price">380 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
@@ -198,7 +195,7 @@
       <div class="cards-image-wrapper">
         <img class="cards-image" src="img/icecream3.png" width="267" height="267" alt="Розовый клубничный пломбир с присыпкой из
                   маленьких белых сердечек">
-        <span class="cards-label" area-label="хит"></span>
+        <p class="cards-label"><span class="visually-hidden">хит</span></p>
         <p><span class="cards-price">355 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
@@ -208,7 +205,7 @@
       <div class="cards-image-wrapper">
         <img class="cards-image" src="img/icecream4.png" width="267" height="267" alt="Бежевый cливочный крем-брюле с вкуснейшей карамельной
             подливкой">
-        <span class="cards-label" area-label="хит"></span>
+        <p class="cards-label"><span class="visually-hidden">хит</span></p>
         <p><span class="cards-price">415 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
@@ -332,5 +329,6 @@
     <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2021</p>
   </div>
 </footer>
+</div>
 </body>
 </html>
