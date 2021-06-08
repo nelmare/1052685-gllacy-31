@@ -80,6 +80,7 @@
 
 html {
   box-sizing: border-box;
+  height: 100%;
 }
 
 *,
@@ -97,6 +98,11 @@ body {
   line-height: 22px;
   font-weight: 400;
   color: var(--basic-white);
+
+  min-height: 100%;
+  display: grid;
+  grid-template-rows: min-content 1fr min-content;
+  align-content: start;
 }
 
 body > input[type="radio"] {
@@ -123,6 +129,12 @@ input[type="radio"].visually-hidden {
   overflow: hidden;
 }
 
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 0 27px;
+}
+
 .button {
   background: linear-gradient(180deg, var(--gradient-orange) 0%, var(--gradient-red) 100%);
   box-shadow: 0px 2px 2px var(--light-orange);
@@ -145,7 +157,21 @@ input[type="radio"].visually-hidden {
   box-shadow: inset 0px 2px 2px var(--red2);
 }
 
+/*Шапка сайта*/
+
+.main-header {
+  margin: 0 auto;
+  margin-bottom: 275px;
+  width: 1200px;
+  padding: 0 27px;
+}
 /*Главная навигация*/
+
+.main-nav {
+  display: grid;
+  grid-template-rows: auto auto;
+  grid-template-columns: 154px 1fr min-content;
+}
 
 .main-nav a {
   text-decoration: none;
@@ -189,6 +215,7 @@ input[type="radio"].visually-hidden {
 }
 
 .menu-list {
+  display: none;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -245,6 +272,7 @@ input[type="radio"].visually-hidden {
 }
 
 .user-form {
+  display: none;
   background-color: var(--white-grey);
   box-shadow: 0px 20px 20px var(--shadow-grey2);
   border-radius: 4px;
@@ -315,6 +343,7 @@ input[type="radio"].visually-hidden {
 }
 
 .cart-content {
+  display: none;
   background-color: var(--white-grey);
   box-shadow: 0px 20px 20px var(--shadow-grey2);
   border-radius: 4px;
@@ -336,6 +365,12 @@ input[type="radio"].visually-hidden {
   color: var(--grey6);
 }
 
+.nav-contacts {
+  grid-row: 2/3;
+  grid-column: 3/4;
+  justify-self: end;
+}
+
 .nav-contacts p {
   margin: 0;
 }
@@ -352,8 +387,7 @@ input[type="radio"].visually-hidden {
 
 .slider {
   position: relative;
-  margin-bottom: 37px;
-  padding-top: 275px;
+  margin-bottom: 40px;
   text-align: center;
   color: var(--basic-white);
 }
@@ -466,11 +500,25 @@ input[type="radio"].visually-hidden {
   background-color: var(--basic-white);
 }
 
+/*Двухколоночные блоки*/
+
+.columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+  margin-bottom: 40px;
+}
+
 /*Акции*/
+
+.special {
+}
+
 .special-item {
   width: 560px;
   min-height: 230px;
   border-radius: 16px;
+  padding: 16px 16px 22px 16px;
 }
 
 .special-item.raspberries {
@@ -517,6 +565,14 @@ input[type="radio"].visually-hidden {
 }
 
 /*Карточки с мороженым*/
+
+.cards {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 26px;
+  margin-bottom: 40px;
+}
+
 .cards-image-wrapper {
   order: 2;
 }
@@ -551,6 +607,7 @@ input[type="radio"].visually-hidden {
 }
 
 .cards-item .product-button {
+  display: none;
   border-radius: 50px;
   line-height: 24px;
   text-decoration: none;
@@ -569,8 +626,6 @@ input[type="radio"].visually-hidden {
   margin: 0;
 }
 
-
-
 /*О магазине*/
 
 .about {
@@ -580,6 +635,9 @@ input[type="radio"].visually-hidden {
   background-position: center, center;
   background-color: var(--waffles-back);
   color: var(--basic-dark-grey);
+  padding: 24px 20px 36px 20px;
+  border-radius: 16px;
+  margin-bottom: 40px;
 }
 
 .about-title {
@@ -593,7 +651,12 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 26px;
+  row-gap: 33px;
 }
+
 
 /*Блок новостей*/
 
@@ -877,14 +940,21 @@ input[type="radio"].visually-hidden {
 /*Подвал сайта*/
 
 .footer {
+  padding-top: 18px;
+  padding-bottom: 25px;
   font-size: 13px;
   line-height: 18px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  column-gap: 26px;
 }
 
 .footer-list {
   list-style: none;
   margin: 0;
   padding: 0;
+  grid-column: 2/4;
+  justify-self: center;
 }
 
 .footer-item a {
@@ -931,6 +1001,11 @@ input[type="radio"].visually-hidden {
 }
 
 /*Копирайт*/
+
+.copyright {
+  justify-self: end;
+  grid-column: 4/5;
+}
 
 .copyright-text {
   font-size: 12px;
