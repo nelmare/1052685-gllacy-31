@@ -853,48 +853,48 @@ input[type="radio"].visually-hidden {
   color: var(--basic-white);
   min-height: 36px;
   width: 218px;
-  position: relative;
+  /*position: relative;*/
 }
 
-.price-line-grey {
-  /*width: 176px;*/
-  height: 2px;
-  background-color: var(--special-white5);
-}
+/*.price-line-grey {*/
+/*  !*width: 176px;*!*/
+/*  height: 2px;*/
+/*  background-color: var(--special-white5);*/
+/*}*/
 
-.price-line-white {
-  width: 60%;
-  height: 2px;
-  background-color: var(--white-grey);
-}
+/*.price-line-white {*/
+/*  width: 60%;*/
+/*  height: 2px;*/
+/*  background-color: var(--white-grey);*/
+/*}*/
 
-.price-circle {
-  position: absolute;
-  top: -9px;
-  width: 4px;
-  height: 4px;
-  background: var(--grey6);
-  border: 8px solid var(--basic-white);
-  border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 var(--grey2);
-  box-shadow: 0 2px 1px 0 var(--grey2);
-  cursor: pointer;
-  box-sizing: content-box;
-}
+/*.price-circle {*/
+/*  position: absolute;*/
+/*  top: -9px;*/
+/*  width: 4px;*/
+/*  height: 4px;*/
+/*  background: var(--grey6);*/
+/*  border: 8px solid var(--basic-white);*/
+/*  border-radius: 50%;*/
+/*  -webkit-box-shadow: 0 2px 1px 0 var(--grey2);*/
+/*  box-shadow: 0 2px 1px 0 var(--grey2);*/
+/*  cursor: pointer;*/
+/*  box-sizing: content-box;*/
+/*}*/
 
-.price-circle-left {
-  left: 10%;
-}
+/*.price-circle-left {*/
+/*  left: 10%;*/
+/*}*/
 
-.price-circle-right {
-  right: 10%;
-}
+/*.price-circle-right {*/
+/*  right: 10%;*/
+/*}*/
 
-.price-circle:hover {
-  width: 4px;
-  height: 5px;
-  border: 9px solid var(--basic-white);
-}
+/*.price-circle:hover {*/
+/*  width: 4px;*/
+/*  height: 5px;*/
+/*  border: 9px solid var(--basic-white);*/
+/*}*/
 
 .filter-button {
   background: var(--special-white);
@@ -1033,4 +1033,62 @@ input[type="radio"].visually-hidden {
 .copyright-text a:focus {
   color: var(--pink);
   border: 1px solid var(--special-pink);
+}
+
+.price-range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-range input[type="range"] {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 88px; /* Full-width */
+  height: 2px; /* Specified height */
+  background: linear-gradient(to right, rgba(248, 247, 244, 0.5) 27%, #ffffff 27%); /* Grey background */
+  outline: none; /* Remove outline */
+  /*opacity: 0.7; !* Set transparency (for mouse-over effects on hover) *!*/
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  display: block;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 20px;*/
+  /*transform: translateX(-50%);*/
+}
+
+.price-range input[id="range-2"] {
+  background: linear-gradient(to left, rgba(248, 247, 244, 0.5) 73%, #ffffff 73%);
+  /*margin-top: -2px;!* Grey background *!*/
+  right: 20px;
+}
+
+/* Mouse-over effects */
+.price-range input[type="range"]:hover {
+  /*opacity: 1; !* Fully shown on mouse-over *!*/
+}
+
+.price-range input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  /*width: 25px; !* Set a specific slider handle width *!*/
+  /*height: 25px; !* Slider handle height *!*/
+  /*background: #04AA6D; !* Green background *!*/
+  width: 4px;
+  height: 4px;
+  background: var(--grey6);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 var(--grey2);
+  box-shadow: 0 2px 1px 0 var(--grey2);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.price-range input::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
 }
