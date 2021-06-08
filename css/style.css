@@ -109,6 +109,10 @@ body > input[type="radio"] {
   display: none;
 }
 
+.green-back {
+  background-color: var(--basic-green);
+}
+
 img {
   max-width: 100%;
   height: auto;
@@ -161,9 +165,8 @@ input[type="radio"].visually-hidden {
 
 .main-header {
   margin: 0 auto;
-  margin-bottom: 275px;
   width: 1200px;
-  padding: 0 27px;
+  padding: 0 27px 28px;
 }
 /*Главная навигация*/
 
@@ -171,6 +174,7 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-rows: auto auto;
   grid-template-columns: 154px 1fr min-content;
+  position: relative;
 }
 
 .main-nav a {
@@ -366,9 +370,9 @@ input[type="radio"].visually-hidden {
 }
 
 .nav-contacts {
-  grid-row: 2/3;
-  grid-column: 3/4;
-  justify-self: end;
+  position: absolute;
+  right: 0;
+  bottom: -35px;
 }
 
 .nav-contacts p {
@@ -388,8 +392,10 @@ input[type="radio"].visually-hidden {
 .slider {
   position: relative;
   margin-bottom: 40px;
+  margin-top: 247px;
   text-align: center;
   color: var(--basic-white);
+
 }
 
 .wrapper {
@@ -775,6 +781,12 @@ input[type="radio"].visually-hidden {
 /*border-radius: 70px;*/
 }
 
+/*Главное содержание страницы каталога */
+
+.page-main {
+  display: grid;
+}
+
 /*Хлебные крошки*/
 
 .breadcrumbs {
@@ -783,6 +795,7 @@ input[type="radio"].visually-hidden {
   padding: 0;
   font-size: 14px;
   line-height: 16px;
+
 }
 
 .breadcrumbs-link {
@@ -803,6 +816,7 @@ input[type="radio"].visually-hidden {
 
 /*Каталог*/
 .catalog-title {
+  margin: 0;
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
