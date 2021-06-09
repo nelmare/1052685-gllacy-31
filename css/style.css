@@ -167,14 +167,21 @@ input[type="radio"].visually-hidden {
 .main-header {
   margin: 0 auto;
   width: 1200px;
-  padding: 0 27px 28px;
+  padding: 10px 27px 28px;
 }
+
+.logo {
+  width: 154px;
+  height: 64px;
+}
+
 /*Главная навигация*/
 
 .main-nav {
   display: grid;
   grid-template-rows: auto auto;
-  grid-template-columns: 154px 1fr min-content;
+  grid-template-columns: 154px 1fr auto;
+  column-gap: 10px;
   position: relative;
 }
 
@@ -192,35 +199,58 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.main-nav-item {
+  position: relative;
 }
 
 .main-nav-link {
   font-weight: bold;
   line-height: 18px;
+  margin-right: 20px;
+  padding: 4px 13px 7px 13px;
+}
+
+.link-border {
   border-bottom: 1px solid var(--special-white);
 }
 
 .main-nav-link:hover {
   background-color: var(--basic-white);
-  border-bottom: none;
   border-radius: 26px;
+}
+
+.main-nav-link:hover .link-border {
+  border-bottom: none;
 }
 
 .main-nav-link:focus {
   background-color: var(--dirty-white);
   box-shadow: inset 0px 2px 1px var(--light-green-grey);
-  border-bottom: none;
   border-radius: 26px;
 }
 
 .main-nav-link.active {
   background-color: var(--dark-peach);
   border-radius: 26px;
+}
+
+.main-nav-link.active .link-border {
   border-bottom: none;
 }
 
 .menu-list {
   display: none;
+}
+
+.main-nav-item:hover .menu-list {
+  display: block;
+  width: 143px;
+  z-index: 1;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -229,6 +259,9 @@ input[type="radio"].visually-hidden {
   border-radius: 4px;
   font-size: 14px;
   line-height: 16px;
+  position: absolute;
+  left: 0;
+  top: 28px;
 }
 
 .menu-list a {
@@ -263,6 +296,13 @@ input[type="radio"].visually-hidden {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.user-list-item {
+  margin-right: 10px;
 }
 
 .user-link {
@@ -270,6 +310,15 @@ input[type="radio"].visually-hidden {
   font-size: 14px;
   line-height: 16px;
   border-radius: 20px;
+  min-height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 16px 7px 45px;
+}
+
+.user-list-item:last-child {
+  margin-right: 0;
 }
 
 .user-link:hover {
@@ -319,6 +368,18 @@ input[type="radio"].visually-hidden {
 .search-button {
   border: none;
   border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  background-image: url("../img/icon-search.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 16px 16px;
+  padding: 0;
+  cursor: pointer;
+}
+
+.search-button:hover {
+  background-image: url("../img/icon-search-hover.svg");
 }
 
 .login-button,
@@ -373,7 +434,7 @@ input[type="radio"].visually-hidden {
 .nav-contacts {
   position: absolute;
   right: 0;
-  bottom: -35px;
+  bottom: -45px;
 }
 
 .nav-contacts p {
@@ -525,7 +586,10 @@ input[type="radio"].visually-hidden {
   width: 560px;
   min-height: 230px;
   border-radius: 16px;
-  padding: 16px 16px 22px 16px;
+  padding: 16px 22px 22px 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .special-item.raspberries {
@@ -550,6 +614,7 @@ input[type="radio"].visually-hidden {
   font-size: 35px;
   line-height: 41px;
   text-align: left;
+  margin-bottom: 15px;
 }
 
 .special-item p {
@@ -565,6 +630,7 @@ input[type="radio"].visually-hidden {
   /*text-shadow: 0px 2px 5px var(--brown2);*/
   /*border-radius: 70px;*/
   padding: 12px 20px 13px 20px;
+  margin-left: auto;
 }
 
 .special-button:hover {
@@ -576,33 +642,58 @@ input[type="radio"].visually-hidden {
 .cards {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr;
-  column-gap: 26px;
   row-gap: 40px;
   margin-bottom: 40px;
+  position: relative;
 }
 
 .cards-image-wrapper {
-  order: 2;
+  height: 267px;
+  margin-bottom: 13px;
+  position: relative;
 }
 
-.cards-item h3 {
-  margin: 0;
-  font-weight: 500;
-  order: 1;
-  border-bottom: 1px solid var(--special-white);
-  text-align: center;
+.cards-item {
+  width: 267px;
+  min-height: 324px;
+  display: flex;
+  flex-direction: column;
+  /*align-items: center;*/
+  box-sizing: content-box;
+  margin-right: 26px;
 }
 
-.cards-item img {
-  border-radius: 50%;
-  background-color: var(--grey);
+.cards-item:nth-child(4n) {
+  margin-right: 0;
 }
 
 .cards-item:hover {
   background-color: var(--special-white);
   box-shadow: 0 20px 20px var(--shadow-grey);
   border-radius: 4px;
+  padding: 6px 13px 0 13px;
+  margin-right: 13px;
+  margin-left: -13px;
 }
+
+.cards-item h3 {
+  margin: 0;
+  font-weight: 500;
+  text-align: center;
+  font-size: 16px;
+  text-decoration: underline;
+  text-decoration-color: var(--special-white);
+  order: 2;
+}
+
+.cards-item img {
+  border-radius: 50%;
+  background-color: var(--grey);
+  width: 267px;
+  height: 267px;
+}
+
+
 
 .cards-label {
   background-image: url("../img/label.png");
@@ -612,14 +703,24 @@ input[type="radio"].visually-hidden {
   width: 61px;
   height: 61px;
   display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
 }
 
 .cards-item .product-button {
   display: none;
+}
+
+.cards-item:hover .product-button {
+  display: block;
+  order: 3;
+  margin: 18px auto 21px auto;
   border-radius: 50px;
   line-height: 24px;
   text-decoration: none;
   box-shadow: 0px 1px 2px var(--red1);
+  padding: 12px 16px;
 }
 
 .cards-price {
@@ -628,10 +729,12 @@ input[type="radio"].visually-hidden {
   line-height: 45px;
 }
 
-.cards-item p {
+.cards-info {
   font-size: 30px;
   line-height: 35px;
   margin: 0;
+  position: absolute;
+  bottom: 20px;
 }
 
 /*О магазине*/
@@ -757,6 +860,7 @@ input[type="radio"].visually-hidden {
   border-radius: 16px;
   color: var(--basic-dark-grey);
   font-style: normal;
+  padding: 30px 25px;
 }
 
 .contacts-wrapper p {
@@ -816,7 +920,7 @@ input[type="radio"].visually-hidden {
   font-weight: bold;
   font-size: 35px;
   line-height: 41px;
-  margin-bottom: 30px;
+  margin-bottom: 15px;
 }
 
 /*Фильтр*/
@@ -834,9 +938,18 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
+  border: none;
+}
+
+.filter-fieldset {
+  margin: 0;
+  padding: 0;
+  margin-top: 14px;
 }
 
 .filter-fieldset legend {
+  margin: 0;
+  margin-bottom: 7px;
   font-weight: 500;
   font-size: 14px;
   line-height: 16px;

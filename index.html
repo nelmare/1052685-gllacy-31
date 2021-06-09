@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon/180.png">
-  <link rel="manifest" href="manifest.webmanifest">
+<!--  <link rel="manifest" href="manifest.webmanifest">-->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
@@ -27,7 +27,7 @@
     </a>
     <ul class="main-nav-list">
       <li class="main-nav-item">
-        <a class="main-nav-link" href="#">Каталог</a>
+        <a class="main-nav-link" href="#"><span class="link-border">Каталог</span></a>
         <ul class="menu-list">
           <li class="menu-item">
             <a class="menu-link new" href="#">Новинки</a>
@@ -47,10 +47,10 @@
         </ul>
       </li>
       <li class="main-nav-item">
-        <a class="main-nav-link" href="#">Доставка и оплата</a>
+        <a class="main-nav-link" href="#"><span class="link-border">Доставка и оплата</span></a>
       </li>
       <li class="main-nav-item">
-        <a class="main-nav-link" href="#">О компании</a>
+        <a class="main-nav-link" href="#"><span class="link-border">О компании</span></a>
       </li>
     </ul>
     <ul class="user-list">
@@ -161,14 +161,18 @@
   <section class="columns special">
     <h2 class="visually-hidden">Акции магазина</h2>
     <div class="special-item raspberries">
-      <h3>Малинка даром!</h3>
-      <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+      <div>
+        <h3>Малинка даром!</h3>
+        <p>При покупке 2 кг любого фруктового мороженого, добавим в ваш заказ банку малинового варенья бесплатно.</p>
+      </div>
       <button class="button special-button" type="button">Хочу варенье!</button>
     </div>
     <div class="special-item chocolates">
-      <h3>Шоколадки даром!</h3>
-      <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
-        бесплатно.</p>
+      <div>
+        <h3>Шоколадки даром!</h3>
+        <p>При покупке 2 кг пломбира, добавим в ваш заказ упаковку вкуснейшей шоколадной присыпки совершенно
+          бесплатно.</p>
+      </div>
       <button class="button special-button" type="button">Хочу шоколадки!</button>
     </div>
   </section>
@@ -179,7 +183,7 @@
       <div class="cards-image-wrapper">
         <img class="cards-image" src="img/icecream1.png" width="267" height="267" alt="Сливочный пломбир с желтым апельсиновым джемом">
         <p class="cards-label"><span class="visually-hidden">хит</span></p>
-        <p><span class="cards-price">310 ₽</span>/кг</p>
+        <p class="cards-info"><span class="cards-price">310 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
     </section>
@@ -188,7 +192,7 @@
       <div class="cards-image-wrapper">
         <img class="cards-image" src="img/icecream2.png" width="267" height="267" alt="Кофейный пломбир с кусочками шоколада">
         <p class="cards-label"><span class="visually-hidden">хит</span></p>
-        <p><span class="cards-price">380 ₽</span>/кг</p>
+        <p class="cards-info"><span class="cards-price">380 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
     </section>
@@ -198,7 +202,7 @@
         <img class="cards-image" src="img/icecream3.png" width="267" height="267" alt="Розовый клубничный пломбир с присыпкой из
                   маленьких белых сердечек">
         <p class="cards-label"><span class="visually-hidden">хит</span></p>
-        <p><span class="cards-price">355 ₽</span>/кг</p>
+        <p class="cards-info"><span class="cards-price">355 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
     </section>
@@ -208,7 +212,7 @@
         <img class="cards-image" src="img/icecream4.png" width="267" height="267" alt="Бежевый cливочный крем-брюле с вкуснейшей карамельной
             подливкой">
         <p class="cards-label"><span class="visually-hidden">хит</span></p>
-        <p><span class="cards-price">415 ₽</span>/кг</p>
+        <p class="cards-info"><span class="cards-price">415 ₽</span>/кг</p>
       </div>
       <a class="button product-button" href="#">Быстрый просмотр</a>
     </section>
