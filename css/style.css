@@ -693,8 +693,6 @@ input[type="radio"].visually-hidden {
   height: 267px;
 }
 
-
-
 .cards-label {
   background-image: url("../img/label.png");
   background-repeat: no-repeat;
@@ -756,6 +754,7 @@ input[type="radio"].visually-hidden {
   font-weight: 500;
   font-size: 24px;
   line-height: 30px;
+  margin-bottom: 7px;
 }
 
 .about-list {
@@ -765,7 +764,11 @@ input[type="radio"].visually-hidden {
   display: grid;
   grid-template-columns: 1fr 1fr;
   column-gap: 26px;
-  row-gap: 33px;
+  row-gap: 25px;
+}
+
+.about-item {
+  padding: 5px 0 0 55px;
 }
 
 
