@@ -261,20 +261,33 @@ input[type="radio"].visually-hidden {
   line-height: 16px;
   position: absolute;
   left: 0;
-  top: 28px;
+  top: 29px;
 }
 
 .menu-list a {
   color: var(--basic-dark-grey);
 }
 
+.menu-link {
+  border-radius: 0;
+  padding: 7px 21px 7px 20px;
+  display: inline-block;
+  vertical-align: middle;
+  width: 100%;
+}
+
 .menu-link.new {
   font-weight: 700;
   border-bottom: 1px solid var(--grey3);
+  padding: 13px 21px 15px 20px;
+  border-top-right-radius: 4px;
+  border-top-left-radius: 4px;
 }
 
-.menu-link {
-  border-radius: 0;
+.menu-item:last-child .menu-link {
+  border-bottom-right-radius: 4px;
+  border-bottom-left-radius: 4px;
+  padding-bottom: 13px;
 }
 
 .menu-link:hover {
@@ -303,6 +316,7 @@ input[type="radio"].visually-hidden {
 
 .user-list-item {
   margin-right: 10px;
+  position: relative;
 }
 
 .user-link {
@@ -326,7 +340,6 @@ input[type="radio"].visually-hidden {
 }
 
 .user-form {
-  display: none;
   background-color: var(--white-grey);
   box-shadow: 0px 20px 20px var(--shadow-grey2);
   border-radius: 4px;
@@ -336,25 +349,30 @@ input[type="radio"].visually-hidden {
 .user-form input[type="email"],
 .user-form input[type="password"] {
   background-color: var(--basic-white);
-  border: 1px solid var(--grey4);
+  /*border: 1px solid var(--grey4);*/
   box-sizing: border-box;
   border-radius: 4px;
   color: var(--basic-dark-grey);
+  box-shadow: 0px 0px 0px 1px var(--grey4);
+  border: none;
+  padding: 13px 15px;
 }
 
 .user-form input[type="text"]:hover,
 .user-form input[type="email"]:hover,
 .user-form input[type="password"]:hover,
 .mailing-form input[type="email"]:hover {
-  border: 2px solid var(--grey);
+  /*border: 2px solid var(--grey);*/
+  box-shadow: 0px 0px 0px 2px var(--grey);
 }
 
 .user-form input[type="text"]:focus,
 .user-form input[type="email"]:focus,
 .user-form input[type="password"]:focus,
 .mailing-form input[type="email"]:focus {
-  border: 2px solid var(--sky-blue);
+  /*border: 2px solid var(--sky-blue);*/
   outline: none;
+  box-shadow: 0px 0px 0px 2px var(--sky-blue);
 }
 
 .user-form input::placeholder,
@@ -382,6 +400,28 @@ input[type="radio"].visually-hidden {
   background-image: url("../img/icon-search-hover.svg");
 }
 
+.search-form,
+.login-form {
+  display: none;
+}
+
+.user-list-item:hover .search-form {
+  display: block;
+  width: 341px;
+  min-height: 81px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 34px;
+  padding: 20px 15px;
+}
+
+.search-form input[type="text"],
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+}
+
 .login-button,
 .order-button {
   box-shadow: 0px 1px 2px var(--light-orange2);
@@ -389,10 +429,39 @@ input[type="radio"].visually-hidden {
   border-radius: 26px;
 }
 
+.login-button {
+  padding: 10px 25px;
+}
+
+.user-list-item:hover .login-form {
+  display: block;
+  width: 277px;
+  min-height: 214px;
+  position: absolute;
+  z-index: 1;
+  right: 0;
+  top: 34px;
+  padding: 20px 17px 20px 19px;
+}
+
+.login-form div {
+  margin-bottom: 20px;
+}
+
+.login-form div:last-child {
+  margin-bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
 .login-form-list {
   padding: 0;
   margin: 0;
   list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  flex-direction: column;
 }
 
 .login-form-list a {
@@ -771,7 +840,6 @@ input[type="radio"].visually-hidden {
   padding: 5px 0 0 55px;
 }
 
-
 /*Блок новостей*/
 
 .blog {
@@ -784,6 +852,7 @@ input[type="radio"].visually-hidden {
   min-height: 220px;
   color: var(--basic-dark-grey);
   border-radius: 16px;
+  padding: 23px 20px;
 }
 
 .blog-title {
@@ -792,6 +861,7 @@ input[type="radio"].visually-hidden {
   line-height: 22px;
   margin: 0;
   text-align: left;
+  margin-bottom: 15px;
 }
 
 .blog-item-title {
@@ -800,17 +870,32 @@ input[type="radio"].visually-hidden {
   line-height: 30px;
   margin: 0;
   text-align: left;
+  width: 287px;
 }
 
 .blog-item-title a {
   color: var(--basic-dark-grey);
-  text-decoration-color: var(--black2);
+  /*text-decoration: underline 2px solid var(--black2);*/
+  text-decoration: none;
+  display: inline;
+}
+
+.blog-item-link span {
+  background-image: linear-gradient(to bottom, var(--black2) 50%, transparent 50%);
+  background-position: 0 1.15em;
+  background-repeat: repeat-x;
+  background-size: 2px 4px;
 }
 
 .blog-item-title a:hover,
 .blog-item-title a:focus {
   color: var(--orange);
   text-decoration-color: var(--pink2);
+}
+
+.blog-item-link:hover span,
+.blog-item-link:focus span {
+  background-image: linear-gradient(to bottom, var(--pink2) 50%, transparent 50%);
 }
 
 /*Рассылка*/
@@ -833,26 +918,44 @@ input[type="radio"].visually-hidden {
   border-radius: 16px;
   min-height: 210px;
   margin: 0 5px;
+  padding: 25px 16px 27px 20px;
 }
 
 .mailing-text {
   margin: 0;
   color: var(--green-grey);
+  margin-bottom: 45px;
+}
+
+.mailing-form {
+  display: flex;
+  width: 100%;
 }
 
 .mailing-form input[type="email"] {
   background-color: var(--basic-white);
-  border: 1px solid var(--grey);
+  /*border: 1px solid var(--grey);*/
   border-radius: 6px;
   color: var(--basic-dark-grey);
+  padding: 12px 14px;
+  margin-right: 10px;
+  flex-grow: 1;
+  box-shadow: 0px 0px 0px 1px var(--grey);
+  border: none;
 }
 
 .mailing-button {
   /*border-radius: 70px;*/
   /*text-shadow: 0px 2px 5px var(--brown2);*/
+  padding: 10px 19px;
 }
 
 /*Карта и контакты*/
+.contacts {
+  width: 1200px;
+  margin: 0 auto;
+  position: relative;
+}
 
 .contacts-map {
   background-color: var(--grey);
@@ -864,12 +967,18 @@ input[type="radio"].visually-hidden {
   color: var(--basic-dark-grey);
   font-style: normal;
   padding: 30px 25px;
+  position: absolute;
+  right: 27px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 306px;
 }
 
 .contacts-wrapper p {
   margin: 0;
   font-size: 14px;
   line-height: 20px;
+  margin-bottom: 30px;
 }
 
 .contacts-wrapper span,
@@ -888,6 +997,9 @@ input[type="radio"].visually-hidden {
   text-decoration: none;
   text-shadow: 0px 2px 5px var(--brown2);
 /*border-radius: 70px;*/
+  padding: 13px 20px;
+  text-align: center;
+  width: 100%;
 }
 
 /*Хлебные крошки*/
@@ -1019,6 +1131,64 @@ input[type="radio"].visually-hidden {
 /*  border: 9px solid var(--basic-white);*/
 /*}*/
 
+.price-range {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.price-range input[type="range"] {
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 88px; /* Full-width */
+  height: 2px; /* Specified height */
+  background: linear-gradient(to right, rgba(248, 247, 244, 0.5) 27%, #ffffff 27%); /* Grey background */
+  outline: none; /* Remove outline */
+  /*opacity: 0.7; !* Set transparency (for mouse-over effects on hover) *!*/
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  display: block;
+  /*position: absolute;*/
+  /*top: 50%;*/
+  /*left: 20px;*/
+  /*transform: translateX(-50%);*/
+}
+
+.price-range input[id="range-2"] {
+  background: linear-gradient(to left, rgba(248, 247, 244, 0.5) 73%, #ffffff 73%);
+  /*margin-top: -2px;!* Grey background *!*/
+  right: 20px;
+}
+
+/* Mouse-over effects */
+.price-range input[type="range"]:hover {
+  /*opacity: 1; !* Fully shown on mouse-over *!*/
+}
+
+.price-range input::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  /*width: 25px; !* Set a specific slider handle width *!*/
+  /*height: 25px; !* Slider handle height *!*/
+  /*background: #04AA6D; !* Green background *!*/
+  width: 4px;
+  height: 4px;
+  background: var(--grey6);
+  border: 8px solid var(--basic-white);
+  border-radius: 50%;
+  -webkit-box-shadow: 0 2px 1px 0 var(--grey2);
+  box-shadow: 0 2px 1px 0 var(--grey2);
+  cursor: pointer;
+  box-sizing: content-box;
+}
+
+.price-range input::-moz-range-thumb {
+  width: 25px; /* Set a specific slider handle width */
+  height: 25px; /* Slider handle height */
+  background: #04AA6D; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+}
+
 .filter-button {
   background: var(--special-white);
   border-radius: 20px;
@@ -1090,6 +1260,17 @@ input[type="radio"].visually-hidden {
   padding: 0;
   grid-column: 2/4;
   justify-self: center;
+  align-self: center;
+
+  display: grid;
+  grid-template-columns: auto auto;
+  column-gap: 10px;
+  row-gap: 12px;
+  width: 327px;
+}
+
+.footer-item {
+  padding-left: 22px;
 }
 
 .footer-item a {
@@ -1110,6 +1291,13 @@ input[type="radio"].visually-hidden {
   list-style: none;
   margin: 0;
   padding: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-self: center;
+}
+
+.social-item {
+  margin: 5px 12px 5px 0;
 }
 
 .social-button {
@@ -1155,63 +1343,6 @@ input[type="radio"].visually-hidden {
 .copyright-text a:hover,
 .copyright-text a:focus {
   color: var(--pink);
-  border: 1px solid var(--special-pink);
+  border-bottom: 1px solid var(--special-pink);
 }
 
-.price-range {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.price-range input[type="range"] {
-  -webkit-appearance: none;  /* Override default CSS styles */
-  appearance: none;
-  width: 88px; /* Full-width */
-  height: 2px; /* Specified height */
-  background: linear-gradient(to right, rgba(248, 247, 244, 0.5) 27%, #ffffff 27%); /* Grey background */
-  outline: none; /* Remove outline */
-  /*opacity: 0.7; !* Set transparency (for mouse-over effects on hover) *!*/
-  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
-  transition: opacity .2s;
-  display: block;
-  /*position: absolute;*/
-  /*top: 50%;*/
-  /*left: 20px;*/
-  /*transform: translateX(-50%);*/
-}
-
-.price-range input[id="range-2"] {
-  background: linear-gradient(to left, rgba(248, 247, 244, 0.5) 73%, #ffffff 73%);
-  /*margin-top: -2px;!* Grey background *!*/
-  right: 20px;
-}
-
-/* Mouse-over effects */
-.price-range input[type="range"]:hover {
-  /*opacity: 1; !* Fully shown on mouse-over *!*/
-}
-
-.price-range input::-webkit-slider-thumb {
-  -webkit-appearance: none; /* Override default look */
-  appearance: none;
-  /*width: 25px; !* Set a specific slider handle width *!*/
-  /*height: 25px; !* Slider handle height *!*/
-  /*background: #04AA6D; !* Green background *!*/
-  width: 4px;
-  height: 4px;
-  background: var(--grey6);
-  border: 8px solid var(--basic-white);
-  border-radius: 50%;
-  -webkit-box-shadow: 0 2px 1px 0 var(--grey2);
-  box-shadow: 0 2px 1px 0 var(--grey2);
-  cursor: pointer;
-  box-sizing: content-box;
-}
-
-.price-range input::-moz-range-thumb {
-  width: 25px; /* Set a specific slider handle width */
-  height: 25px; /* Slider handle height */
-  background: #04AA6D; /* Green background */
-  cursor: pointer; /* Cursor on hover */
-}
