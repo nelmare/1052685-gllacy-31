@@ -1256,7 +1256,7 @@ input[type="radio"].visually-hidden {
   border: none;
   color: var(--basic-white);
   width: 196px;
-  padding: 9px 14px 8px 16px;
+  padding: 10px 14px 8px 16px;
   font-size: inherit;
   cursor: pointer;
   line-height: inherit;
@@ -1713,6 +1713,8 @@ input[type="radio"].visually-hidden {
 
 /*.product-button {*/
 /*  display: block;*/
+/*  width: 200px;*/
+/*  margin: 0 auto;*/
 /*}*/
 
 /*.product-button-wrapper {*/
@@ -1733,7 +1735,7 @@ input[type="radio"].visually-hidden {
 /*.cards-item:hover .product-button-wrapper {*/
 /*  display: block;*/
 /*  position: absolute;*/
-/*  bottom: -80px;*/
+/*  bottom: -86px;*/
 /*  left: 0;*/
 /*  right: 0;*/
 /*  z-index: 1;*/
