@@ -475,6 +475,10 @@ input[type="radio"].visually-hidden {
   padding-left: 16px;
 }
 
+.login-link svg {
+  margin-top: -1px;
+}
+
 .login-link:hover path {
   fill: var(--basic-dark-grey);
 }
