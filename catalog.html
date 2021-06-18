@@ -47,14 +47,27 @@
     </ul>
     <ul class="user-list">
       <li class="user-list-item">
-        <button class="user-link search-button" type="button" aria-label="Поиск товара"></button>
+        <button class="user-link search-button" type="button" aria-label="Поиск товара">
+          <svg width="16" height="16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M16 14.665l-4.921-4.932a6.144 6.144 0 00-.994-8.273 6.113 6.113 0 00-8.307.352 6.141 6.141 0 00-.293
+            8.328 6.11 6.11 0 008.262.937L14.659 16 16 14.665zm-9.918-4.288a4.245 4.245 0 01-3.928-2.63 4.269 4.269 0 01.922-4.643
+            4.248 4.248 0 014.632-.923 4.253 4.253 0 012.624 3.936 4.274 4.274 0 01-1.247 3.01 4.256 4.256 0 01-3.003 1.25z"
+                fill="#fff"/>
+          </svg>
+        </button>
         <form class="user-form search-form" action="https://echo.htmlacademy.ru" method="get">
           <label class="visually-hidden" for="search-index">Введите слово для поиска</label>
           <input type="text" name="search-index" id="search-index" placeholder="Крем-брюле">
         </form>
       </li>
       <li class="user-list-item">
-        <a class="user-link login-link" href="#">Вход</a>
+        <a class="user-link login-link" href="#">
+          <svg width="20" height="19" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M6.04 14.88l6.92-5.38-6.92-5.37v2.91H0v4.92h6.04v2.92z" fill="#fff"/>
+            <path d="M18 0H5a2 2 0 00-2 2v2h2V2h13v15H5v-2H3v2a2 2 0 002 2h13a2 2 0 002-2V2a2 2 0 00-2-2z" fill="#fff"/>
+          </svg>
+          Вход
+        </a>
         <form class="user-form login-form" action="https://echo.htmlacademy.ru" method="post">
           <div>
             <label class="visually-hidden" for="login-email">Введите e-mail</label>
@@ -80,6 +93,13 @@
       </li>
       <li class="user-list-item">
         <a class="user-link cart-link cart-link-filled" href="#" aria-label="Корзина покупок">
+          <svg width="21" height="20" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.034 20a2.008 2.008 0 002.015-2c0-1.105-.902-2-2.015-2a2.008 2.008 0 00-2.016 2c0 1.105.903 2
+            2.016 2zM16.103 20a2.008 2.008 0 002.015-2c0-1.105-.902-2-2.015-2a2.008 2.008 0 00-2.016 2c0 1.105.903 2
+            2.016 2zM5.703 2l-.241-2H0v2h3.668l1.511 13h14.108L21 2H5.703zm11.8 11H6.973L5.965 4h12.727l-1.189 9z"
+                  fill="#343434"/>
+            <path d="M5.935 4.03L6.973 13h10.53l1.19-8.97H5.934z" fill="#E84D37"/>
+          </svg>
           <span class="cart cart-filled">2 товара</span>
         </a>
         <div class="cart-content">
@@ -135,13 +155,7 @@
       <a class="breadcrumbs-link" href="index.html">Главная</a>
     </li>
     <li class="breadcrumbs-item">
-      <span>&#187;</span>
-    </li>
-    <li class="breadcrumbs-item">
       <a class="breadcrumbs-link" href="#">Каталог</a>
-    </li>
-    <li class="breadcrumbs-item">
-      <span>&#187;</span>
     </li>
     <li class="breadcrumbs-item">
       <a class="breadcrumbs-link active">Сливочное</a>
@@ -165,8 +179,8 @@
       <fieldset class="filter-fieldset price">
         <legend>Цена: 100 ₽ – 500 ₽</legend>
         <div class="price-range">
-          <input type="range" id="range-1" min="0" max="400" value="100">
-          <input type="range" id="range-2" min="400" max="800" value="500">
+          <input type="range" id="range-1" min="0" max="400" value="100" tabindex="0">
+          <input type="range" id="range-2" min="400" max="800" value="500" tabindex="0">
 <!--          <div class="price-line-grey">-->
 <!--            <div class="price-line-white"></div>-->
 <!--          </div>-->
@@ -181,19 +195,19 @@
         <ul class="fieldset-list fat-list">
           <li class="fieldset-item">
             <input class="form-radio visually-hidden" type="radio" name="radio" id="radio1">
-            <label for="radio1" tabindex="0">0 %</label>
+            <label for="radio1">0 %</label>
           </li>
           <li class="fieldset-item">
             <input class="form-radio visually-hidden" type="radio" name="radio" id="radio2" checked>
-            <label for="radio2" tabindex="0">до 10 %</label>
+            <label for="radio2" >до 10 %</label>
           </li>
           <li class="fieldset-item">
             <input class="form-radio visually-hidden" type="radio" name="radio" id="radio3">
-            <label for="radio3" tabindex="0">до 30 %</label>
+            <label for="radio3">до 30 %</label>
           </li>
           <li class="fieldset-item">
             <input class="form-radio visually-hidden" type="radio" name="radio" id="radio4">
-            <label for="radio4" tabindex="0">выше 30 %</label>
+            <label for="radio4">выше 30 %</label>
           </li>
         </ul>
       </fieldset>
@@ -243,7 +257,7 @@
   <section>
     <h2 class="visually-hidden">Продукция магазина</h2>
     <div class="cards">
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочное с апельсиновым джемом и цитрусовой стружкой</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream1.png" width="267" height="267"
@@ -253,7 +267,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочно-кофейное с кусочками шоколада</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream2.png" width="267" height="267"
@@ -262,10 +276,10 @@
           <p class="cards-info"><span class="cards-price">380 ₽</span>/кг</p>
         </div>
 <!--        <div class="product-button-wrapper">-->
-          <a class="button product-button" href="#">Быстрый просмотр</a>
+          <a class="button product-button" href="#" tabindex="0">Быстрый просмотр</a>
 <!--        </div>-->
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream3.png" width="267" height="267" alt="Розовый клубничный пломбир с присыпкой из
@@ -273,9 +287,9 @@
           <p class="cards-label"><span class="visually-hidden">хит</span></p>
           <p class="cards-info"><span class="cards-price">355 ₽</span>/кг</p>
         </div>
-        <a class="button product-button" href="#">Быстрый просмотр</a>
+        <a class="button product-button" href="#" tabindex="0">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочное крем-брюле с карамельной подливкой</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream4.png" width="267" height="267" alt="Бежевый cливочный крем-брюле с вкуснейшей карамельной
@@ -285,7 +299,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочное с брусничным джемом</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream5.png" width="267" height="267"
@@ -295,7 +309,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочно-черничное с цельными ягодами черники</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream6.png" width="267" height="267"
@@ -305,7 +319,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочно-лимонное с карамельной присыпкой</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream7.png" width="267" height="267" alt="Мороженое лимонного цвета с карамельной присыпкой
@@ -315,7 +329,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочное с шоколадной стружкой</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream8.png" width="267" height="267"
@@ -325,7 +339,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочно-ванильное с кусочками шоколада</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream9.png" width="267" height="267"
@@ -335,7 +349,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочноe с ментоловым сиропом</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream10.png" width="267" height="267" alt="Мороженое голубого цвета">
@@ -344,7 +358,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочное с кусочками черного шоколада</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream11.png" width="267" height="267"
@@ -354,7 +368,7 @@
         </div>
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
-      <section class="cards-item">
+      <section class="cards-item" tabindex="0">
         <h3>Сливочное с мятным сиропом</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream12.png" width="267" height="267"
