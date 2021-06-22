@@ -340,6 +340,7 @@ input[type="radio"].visually-hidden {
   background-color: var(--light-peach);
 }
 
+.menu-link:active,
 .menu-link:focus {
   background-color: var(--peach);
 }
@@ -378,7 +379,7 @@ input[type="radio"].visually-hidden {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 7px 16px 6px;
+  padding: 6px 16px 6px;
 }
 
 .user-link svg {
@@ -703,7 +704,7 @@ input[type="radio"].visually-hidden {
   bottom: -52px;
   display: flex;
   flex-wrap: wrap;
-  width: 167px;
+  width: 168px;
   justify-content: flex-end;
 }
 
@@ -824,6 +825,15 @@ input[type="radio"].visually-hidden {
 .toggle label:active {
   background-color: var(--basic-white);
 }
+
+.toggle label:focus-within {
+  outline: -webkit-focus-ring-color auto 5px;
+}
+
+/*.cards-item:focus-within .product-button {*/
+/*  outline: 2px dotted;*/
+/*}*/
+
 
 .btn-1:checked ~ .wrapper .slide1,
 .btn-2:checked ~ .wrapper .slide2,
@@ -1319,6 +1329,7 @@ input[type="radio"].visually-hidden {
   top: 50%;
   transform: translateY(-50%);
   width: 306px;
+  z-index: 4;
 }
 
 .contacts-wrapper p {
@@ -1789,7 +1800,6 @@ input[type="radio"].visually-hidden {
 }
 
 .filter-button:hover {
-  border: none;
   color: var(--basic-dark-grey);
   background-color: var(--basic-white);
 }
@@ -1861,7 +1871,7 @@ input[type="radio"].visually-hidden {
 }
 
 .pagination-link.active,
-.pagination-link:focus {
+.pagination-link:active {
   background-color: var(--basic-white);
   color: var(--basic-dark-grey);
 }
