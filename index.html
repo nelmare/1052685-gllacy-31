@@ -84,7 +84,7 @@
           </div>
           <div>
             <label class="visually-hidden" for="login-password">Введите пароль</label>
-            <input type="password" name="login-password" id="login-password" placeholder="&#183; &#183; &#183; &#183; &#183; &#183;">
+            <input type="password" name="login-password" id="login-password" placeholder="......">
           </div>
           <div>
             <button class="button login-button" type="button">Войти</button>
@@ -219,7 +219,7 @@
 <!--        </div>-->
       </section>
       <section class="cards-item">
-        <h3>Сливочно-клубничное с присыпкой из белого шоколада</h3>
+        <h3>Сливочно-клубничное с&nbsp;присыпкой из белого шоколада</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream3.png" width="267" height="267" alt="Розовый клубничный пломбир с присыпкой из
                     маленьких белых сердечек">
@@ -229,7 +229,7 @@
         <a class="button product-button" href="#">Быстрый просмотр</a>
       </section>
       <section class="cards-item">
-        <h3>Сливочное крем-брюле с карамельной подливкой</h3>
+        <h3>Сливочное крем-брюле с&nbsp;карамельной подливкой</h3>
         <div class="cards-image-wrapper">
           <img class="cards-image" src="img/icecream4.png" width="267" height="267" alt="Бежевый cливочный крем-брюле с вкуснейшей карамельной
               подливкой">
@@ -251,7 +251,7 @@
         <li class="about-item about-item-leaf">Для приготовления мороженого используются настоящие сливки и молоко высочайшего качества. Все дополнительные
           ингредиенты и добавки произведены из натурального, экологически чистого сырья.
         </li>
-        <li class="about-item about-item-thermometer">Доставка нашего мороженого до заказчиков осуществляется в специальном термопаке, который не дает мороженому
+        <li class="about-item about-item-thermometer">Доставка нашего мороженого до заказчиков осуществляется в&nbsp;специальном термопаке, который не дает мороженому
           растаять в пути и позволяет сохранить превосходный вкус.
         </li>
       </ul>
@@ -281,14 +281,14 @@
   <section class="contacts">
     <h2 class="visually-hidden">Контакты магазина</h2>
     <div class="contacts-map-wrapper">
-      <!--          <iframe class="contacts__active-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6036253002965!2d30.320858715883602!3d59.9387191690544!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1587990916306!5m2!1sru!2sru"-->
-      <!--                  width="600" height="450" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">-->
-      <!--          </iframe>-->
+      <iframe class="contacts-active-map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1996.8226084186708!2d30.315214851720512!3d59.96826598179812!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca5afc31%3A0x5f2ac55f567b2400!2sHTML%20Academy!5e0!3m2!1sru!2sru!4v1624352805713!5m2!1sru!2sru"
+              width="1200" height="430" style="border:0;" allowfullscreen="" aria-hidden="false" tabindex="0">
+      </iframe>
       <img class="contacts-map" src="img/map.png" width="1200" height="430" alt="Офис компании расположен по адресу: Санкт-Петербург, Набережная
           реки Карповки, д.5 лит П">
     </div>
     <address class="contacts-wrapper">
-      <p>Адрес главного офиса и офлайн-магазина:<br>
+      <p>Адрес главного офиса<br> и офлайн-магазина:<br>
         <span>Наб. Реки Карповки, 5&nbsp;лит&nbsp;П,&nbsp;Санкт-Петербург</span></p>
       <p>Для заказов по телефону: <a class="contacts-phone" href="tel:+78005558628"><span>+7&nbsp;800&nbsp;555-86-28</span></a><br>
         (с 10 до 20 ежедневно)</p>
@@ -348,8 +348,8 @@
   </ul>
   <ul class="footer-list">
     <li class="footer-item"><a href="#"><b>Для поставщиков</b></a></li>
-    <li class="footer-item"><a href="#">О производстве</a></li>
     <li class="footer-item"><a href="#">Наши документы</a></li>
+    <li class="footer-item"><a href="#">О производстве</a></li>
     <li class="footer-item"><a href="#">Экологические стандарты</a></li>
   </ul>
   <div class="copyright">
@@ -359,6 +359,30 @@
     <p class="copyright-text">Сделано в <a class="copyright-link" href="https://htmlacademy.ru/intensive/htmlcss">HTML Academy</a> © 2021</p>
   </div>
 </footer>
+</div>
+<div class="modal-wrapper">
+  <section class="modal modal-feedback">
+    <h2 class="visually-hidden">Форма обратной связи</h2>
+    <p class="modal-description">Мы обязательно вам ответим!</p>
+    <form class="feedback-form" action="https://echo.htmlacademy.ru" method="post">
+      <div>
+        <label class="visually-hidden" for="feedbacker-name">Имя и фамилия</label>
+        <input id="feedbacker-name" type="text" name="name" placeholder="Имя Фамилия">
+      </div>
+      <div>
+        <label class="visually-hidden" for="feedbacker-email">Пароль</label>
+        <input id="feedbacker-email" type="email" name="feedbacker-email" placeholder="email@example.com">
+      </div>
+      <div>
+        <label class="visually-hidden" for="feedback">Напишите здесь Ваши отзывы и пожелания</label>
+        <textarea id="feedback" name="feedback" rows="5" placeholder="В свободной форме"></textarea>
+      </div>
+      <button class="button feedback-button" type="submit">Отправить</button>
+    </form>
+    <button class="modal-close" type="button">
+      <span class="visually-hidden">Закрыть</span>
+    </button>
+  </section>
 </div>
 </body>
 </html>
