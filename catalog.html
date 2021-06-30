@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="icon" href="favicon.ico">
   <link rel="apple-touch-icon" href="favicon/180.png">
-<!--  <link rel="manifest" href="manifest.webmanifest">-->
+  <link rel="manifest" href="manifest.webmanifest">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <link href="css/normalize.css" rel="stylesheet">
   <link href="css/style.min.css" rel="stylesheet">
@@ -171,7 +171,8 @@
       <fieldset class="filter-fieldset sorting">
         <legend>Сортировка:</legend>
         <div class="sorting-select-wrapper">
-          <select class="sorting-select" name="sorting">
+          <label class="visually-hidden" for="sorting-select">Выберите способ сортировки нашей продукции</label>
+          <select class="sorting-select" name="sorting" id="sorting-select">
             <option value="value1" selected>по популярности</option>
             <option value="value2">сначала недорогие</option>
             <option value="value3">сначала дорогие</option>
@@ -180,7 +181,10 @@
         </div>
       </fieldset>
       <fieldset class="filter-fieldset price">
-        <legend>Цена: <span class="price-from">100</span> ₽ – <span class="price-to">500</span> ₽</legend>
+        <legend>Цена:
+          <label class="price-from" for="range-1"><span class="visually-hidden">от</span>100 ₽</label> –
+          <label class="price-to" for="range-2"><span class="visually-hidden">до</span>500 ₽</label>
+        </legend>
         <div class="price-range">
           <input type="range" id="range-1" min="0" max="400" value="100" tabindex="0">
           <input type="range" id="range-2" min="400" max="800" value="500" tabindex="0">
@@ -247,7 +251,7 @@
           </li>
         </ul>
       </fieldset>
-      <button class="filter-button" type="button">Применить</button>
+      <button class="filter-button" type="submit">Применить</button>
     </form>
   </section>
   <section>
